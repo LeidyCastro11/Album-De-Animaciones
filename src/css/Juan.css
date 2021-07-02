@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
 html, body {
     margin: 0;
     padding: 0;
@@ -100,6 +102,7 @@ animation-duration: 3s;
 }
 
 .Menu {
+    text-decoration: none;
     align-items: center;
     display: flex;
     width: 90%;
@@ -109,6 +112,7 @@ animation-duration: 3s;
 }
 
 .Menu ul{
+    text-decoration: none;
     width: min-content;
     height: min-content;
     justify-content: space-between;
@@ -123,9 +127,15 @@ animation-duration: 3s;
     
 }
 
+.Menu ul li a{
+    text-decoration: none;
+}
+
 .Menu ul li {
     display: flex;
-    background-color: #A9ECFF;
+    text-decoration: none;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,195,233,1) 100%);
     align-items: center;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -179,9 +189,17 @@ animation-duration: 3s;
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #A9ECFF;
+    background: rgb(198,164,178);
+background: radial-gradient(circle, rgba(198,164,178,1) 0%, rgba(17,39,56,1) 100%);
     margin: 20px;
     transition: transform 3s;
+}
+
+h2{
+    font-size: 60px;
+    font-family: serif;
+    font-style: italic;
+
 }
 
 .transiciones, .giros{
@@ -400,4 +418,127 @@ animation-duration: 3s;
     animation-duration: 3s ;
 }
 
+/* ZOOM */
+
+.Zoom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    width: 50%;
+    column-gap: 10px;
+    row-gap: 15px; /*Espaciados entre cajas */
+    padding: 20px 0;   
+}
   
+.zoom_in:hover{
+    transform: scale(1.5);
+}
+.zoom_on:hover{
+    transform: scale(0.3);
+}
+
+#conte_image{
+    text-align: center;
+    /* width: 30%;
+    height: 60% ; */
+}
+
+#imagen{
+    width: 50%;
+    height: 60% ;
+    transition: width 4s, border-radius 2s;  
+}
+#imagen:hover{
+    width: 30%;
+    border-radius: 80%;
+}
+#cortina{
+    margin-top: 200px;
+    text-align: center;
+}
+
+#cortina div{
+background: rgb(131,58,180);
+   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+   display: inline-block;
+   height: 30px;
+   width: 300px;
+}
+
+#imagen1{
+    transition: all linear 8s;
+}
+
+#imagen2{
+    transition: all ease-in-out 8s;
+}
+
+#imagen3{
+    transition: all ease-in 8s;
+}
+
+#imagen4{
+    transition: all ease-out  8s;
+}
+
+#cortina:hover div{
+    height: 600px;
+}
+
+.luminus{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.luminus span{
+    font-size: 120pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.luminus span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+
+.luminus span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+
+.luminus span:hover {
+    filter: contrast(250%);
+}
+
+.luminus span:nth-child(1) {
+    color: #00bef8;
+}
+
+.luminus span:nth-child(2) {
+    color: #ff0697;
+}
+
+.luminus span:nth-child(3) {
+    color: #ff4d00;
+}
+
+.luminus span:nth-child(4) {
+    color: #ffe600;
+}
+
+.luminus span:nth-child(5) {
+    color: #bb00ff;
+}
+
+
+
+
+
